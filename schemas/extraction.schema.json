@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source supported extraction contract",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "source_id": {
+            "type": "string"
+          },
+          "document_id": {
+            "type": "string"
+          },
+          "subject_name_original": {
+            "type": "string"
+          },
+          "subject_name_english": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "predicate": {
+            "type": "string"
+          },
+          "claim_english": {
+            "type": "string"
+          },
+          "original_support_span": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publication_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "event_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "effective_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "expires_on": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "stage": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "territories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "amount": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "value": {
+                "type": "number",
+                "minimum": 0
+              },
+              "currency": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "upfront",
+                  "contingent_milestone",
+                  "capex",
+                  "acquisition_equity",
+                  "annual_sales",
+                  "financing",
+                  "market_size",
+                  "other"
+                ]
+              },
+              "original_expression": {
+                "type": "string"
+              },
+              "canadian_share_verified": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "value",
+              "currency",
+              "kind",
+              "original_expression",
+              "canadian_share_verified"
+            ]
+          },
+          "quantity": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "value": {
+                "type": "number"
+              },
+              "unit": {
+                "type": "string"
+              },
+              "period": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "value",
+              "unit",
+              "period"
+            ]
+          },
+          "uncertainty": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "source_id",
+          "document_id",
+          "subject_name_original",
+          "subject_name_english",
+          "predicate",
+          "claim_english",
+          "original_support_span",
+          "locator",
+          "publication_date",
+          "event_date",
+          "effective_date",
+          "expires_on",
+          "stage",
+          "territories",
+          "conditions",
+          "amount",
+          "quantity",
+          "uncertainty"
+        ]
+      }
+    }
+  },
+  "required": [
+    "claims"
+  ]
+}

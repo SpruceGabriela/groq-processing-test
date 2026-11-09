@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+jsonschema
+mlflow
+pytest
+httpx
+openai
+python-dotenv

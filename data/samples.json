@@ -1,0 +1,10 @@
+[
+  {"source_id": "S05", "canonical_url": "https://www.reuters.com/example-lng", "publication_date": "2026-09-29",
+   "language": "en", "title": "LNG Canada Phase 2 decision",
+   "text": "Shell announced the Phase 2 final investment decision on 29 September 2026. PetroChina holds 15% of LNG Canada.\nThe project is expected to cost US$12 billion."},
+  {"source_id": "S20", "canonical_url": "https://www.mofcom.gov.cn/example", "publication_date": "2026-10-01",
+   "language": "zh", "title": "Tariff notice",
+   "text": "商务部宣布，自2026年10月1日起暂停对加拿大油菜籽加征关税。"},
+  {"source_id": "S99", "canonical_url": "https://weibo.com/example", "publication_date": "2026-10-10",
+   "language": "en", "title": "Unrelated post", "text": "A new movie was released this weekend."}
+]
